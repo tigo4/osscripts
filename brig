@@ -1,0 +1,8 @@
+#!/bin/bash
+
+##echo $1 > /sys/class/backlight/intel_backlight/brightness
+xcalib -c
+##xcalib -co 45 -a
+xcalib -co 65 -a
+
+exit 0

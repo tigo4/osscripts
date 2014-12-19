@@ -1,0 +1,23 @@
+#!/bin/bash
+
+##dhclient -r eth0
+
+##sudo /etc/osscripts/brig 70
+
+sudo firestarter --stop
+
+##sed -i s'/eth0/wlan0/g' /etc/firestarter/configuration
+##firestarter --stop
+
+sudo service network-manager start
+
+sleep 2
+
+sudo nmcli con up id Network-23 || (echo "connection failed"; read dummy)
+##sudo nmcli con up id Skynet8 || (echo "connection failed"; read dummy)
+##sudo nmcli con up id n8299 || (echo "connection failed"; read dummy)
+
+sudo /etc/osscripts/dns
+
+ping google.com
+

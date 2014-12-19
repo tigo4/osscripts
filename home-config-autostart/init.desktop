@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=init
+Comment=init
+Exec=/etc/osscripts/init
+Terminal=false
+Type=Application
+NoDisplay=true
+OnlyShowIn=OPENBOX;GNOME;LXDE

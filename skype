@@ -1,0 +1,17 @@
+#!/bin/bash
+###sudo iptables -A OUTBOUND -p udp -m owner --uid-owner zskype -j ACCEPT
+###sudo iptables -I OUTPUT -m owner --uid-owner zskype -j ACCEPT
+sudo iptables -I OUTPUT -m owner --gid-owner skyype -j ACCEPT
+###sudo iptables -I INPUT -p udp -m length --length 39 -m u32 --u32 '27&0x8f=7' --u32 '31=0x527c4833' -j ACCEPT
+###sudo iptables -I INPUT -p udp -m length --length 321 -m u32 --u32 '27&0x8f=7' --u32 '31=0x527c4833' -j ACCEPT
+sudo iptables -I INPUT -p udp -m length --length 321 -j ACCEPT
+sudo iptables -I INPUT -p udp -m length --length 386 -j ACCEPT
+###sudo iptables -I INPUT -p udp -m string --algo kmp --string skype -j ACCEPT
+###xhost +SI:localuser:zskype
+###gksudo -u zskype 'xterm -e nohup padsp skype'
+###gksudo -u zskype 'xterm -e nohup skype'
+###sudo -u root1 -H -g zskype 'xterm -e nohup skype'
+###sudo -u tigo -H -g zskype -s xterm -e nohup skype
+######sudo -g zskype -s xterm -e nohup skype
+sudo -g skyype skype&
+

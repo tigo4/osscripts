@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo service virtualbox astart
+sudo iptables -I INPUT -s 192.168.56.101 -d 192.168.56.1 -i vboxnet0 -j ACCEPT
+sudo iptables -I OUTPUT -s 192.168.56.1 -d 192.168.56.101 -j ACCEPT
+

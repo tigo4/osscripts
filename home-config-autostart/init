@@ -1,0 +1,22 @@
+#!/bin/bash
+
+localdir=~/.local
+cachedir=~/.cache
+
+rm -r $localdir
+rm -r $cachedir
+  
+##if [ -d $localdir ]; then
+##	xmessage error osscripts init local
+##fi
+
+##if [ -d $cachedir ]; then
+##	xmessage error osscripts init cache
+##fi
+
+mkdir $localdir
+chmod 700 $localdir
+
+mkdir $cachedir
+chmod 700 $cachedir
+

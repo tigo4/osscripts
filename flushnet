@@ -1,0 +1,10 @@
+#!/bin/bash
+
+    echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
+    sudo iptables -F
+    sudo ip6tables -F
+    cat /dev/null > /etc/resolv.conf
+    sudo iptables-restore < /etc/osscripts/tables
+    sudo ip6tables-restore < /etc/osscripts/6tables
+
+

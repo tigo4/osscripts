@@ -1,0 +1,23 @@
+#!/bin/bash
+
+. ./.bashrc
+
+sudo mount /dev/sda3 /media/data
+echo $?
+dmesg | tail | grep count
+
+zchrsky 
+echo $?
+dmesg | tail | grep count
+
+mz 
+echo $?
+dmesg | tail | grep count
+
+##4th 
+##echo $?
+
+read dummy
+
+m
+

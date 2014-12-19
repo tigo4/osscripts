@@ -1,0 +1,48 @@
+#!/bin/bash
+sync
+firestarter --stop
+##service mysql stop
+killall adb
+nmcli con down id Network-23
+##nmcli con down id n8299
+service network-manager stop
+sync
+truecrypt -d
+## truecrypt -l
+sync
+umount /dev/sdb*
+umount /dev/sda*
+umount /dev/sdc*
+umount /dev/sdd*
+umount /media/*
+umount /mnt
+sync
+dmesg|tail
+df -h
+echo ""
+##echo "Shutdown?"
+##read answ
+result1=0;
+result2=0;
+result3=0;
+result4=0;
+df -h | grep /media
+result1=$?
+df -h | grep /mapper | grep -v lv1
+result2=$?
+df -h | grep /mnt
+result3=$?
+grep truecrypt /etc/mtab
+result4=$?
+grep media /etc/mtab
+result5=$?
+
+if [ "$result1" == "1" -a "$result2" == "1" -a "$result3" == "1" -a "$result4" == "1" -a "$result5" == "1" ]; then
+	###su -c 'ifconfig wlan0 down;ifconfig eth0 down;ifconfig ppp0 down;shutdown -h now'
+	###su -c 'shutdown -h now'
+	### shutdown -h now
+	##lxsession-logout
+	 ##service lightdm stop
+	 sync
+	 shutdown -h now
+fi
