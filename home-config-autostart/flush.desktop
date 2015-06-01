@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=flushnet
-Comment=flushnet
-Exec=sudo /etc/osscripts/flushnet
-Terminal=false
-Type=Application
-NoDisplay=true
-OnlyShowIn=OPENBOX;GNOME;LXDE

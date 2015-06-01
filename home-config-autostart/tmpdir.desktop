@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=tmpdir
-Comment=tmpdir
-Exec=mkdir /tmp/Downloads
-Terminal=false
-Type=Application
-NoDisplay=true
-OnlyShowIn=OPENBOX;GNOME;LXDE

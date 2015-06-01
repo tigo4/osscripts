@@ -1,11 +1,14 @@
 #!/bin/bash
 sync
-firestarter --stop
-##service mysql stop
+##firestarter --stop
+service mysql stop
 killall adb
-nmcli con down id Network-23
+nmcli con down id UPC6441669
 ##nmcli con down id n8299
 service network-manager stop
+rm -r /home/tigo/.cache/thumbnails/*
+sync
+/etc/osscripts/clean
 sync
 truecrypt -d
 ## truecrypt -l

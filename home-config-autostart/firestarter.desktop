@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=firestarter
-Comment=firestarter
-Exec=sudo /usr/sbin/firestarter --start-hidden
-Terminal=false
-Type=Application
-NoDisplay=true
-OnlyShowIn=OPENBOX;GNOME;LXDE
